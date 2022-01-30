@@ -1,5 +1,6 @@
 import { showChooseModalArea } from "./chooseModal.js"
 import { showModal } from "./form.js"
+import { inputCode } from "./inputCode.js"
 
 const getPackButton = document.querySelector("[data-get-button]")
 const inputPhone = document.querySelector("[data-input-phone]")
@@ -26,16 +27,4 @@ const checkInputPhone = ()=>{
     else {
 		setSuccessFor(inputPhone);
 	}
-}
-
-function setErrorFor(input, message ) {
-	const formControl = input.parentElement;
-	const small = formControl.querySelector('small');
-	formControl.className = 'container-label error';
-	small.innerText = message;
-}
-
-function setSuccessFor(input) {
-	const formControl = input.parentElement;
-	formControl.className = 'container-label success';
 }

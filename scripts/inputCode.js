@@ -1,3 +1,6 @@
+import { setErrorFor, setSuccessFor } from "./checkInput.js";
+
+
 export const inputCode = document.querySelector("[data-input-code]")
 
 
