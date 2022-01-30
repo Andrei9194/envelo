@@ -1,7 +1,6 @@
+import { showChooseModalArea } from "./chooseModal.js"
+
 const getPackButton = document.querySelector("[data-get-button]")
-const chooseModalArea = document.querySelector('.chooseModal')
-const endActionButton = document.querySelector('[data-button-end-action]')
-const repeatActionButton = document.querySelector('[data-button-repeat-action]')
 const containerForm = document.querySelector('.modal')
 const inputCode = document.querySelector("[data-input-code]")
 const inputPhone = document.querySelector("[data-input-phone]")
@@ -54,4 +53,3 @@ function setSuccessFor(input) {
 	const formControl = input.parentElement;
 	formControl.className = 'container-label success';
 }
-
