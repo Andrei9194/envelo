@@ -4,46 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <div>
-            <div>
-                <h1>Envelo</h1>
-                <p>Możesz mieć swoją przesyłkę w kilkanaście sekund.<br/>Rozpocznij klikając w przycisk</p>
+    <div class="outer">
+        <div class="container container-form-focus">
+            <div class="container-info">
+                <h1 class="container-title">Envelo</h1>
+                <p class="container-text">Możesz mieć swoją przesyłkę w kilkanaście sekund.<br/>Rozpocznij klikając w przycisk</p>
             </div>
-            <div>
-                <form>
-                    <div>
-                        <label for='data' >Numer telefonu</label>
-                        <input type="text" maxlength="12" name="phone" id="phone" required />
-                        <small>Error message</small>
-                    </div>
-                    <div>
-                        <label for="data" >Kod odbioru</label>    
+            <div class="modal hidden">
+                <form class="container-form">
+                    <div class="container-label">
+                        <label for='data' class='lable-text'>Numer telefonu</label>
                         <input 
+                        class="container-input" data-input-phone
+                        type="text" maxlength="12" name="phone" id="phone" 
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').split(/(\d{3})/).join(' ').trim();" required
+                        />
+                        <small class="i">Error message</small>
+                    </div>
+                    <div class="container-label">
+                        <label for="data" class="lable-text">Kod odbioru</label>    
+                        <input 
+                            data-input-code
+                            class="container-input"
                             type="text" maxlength="4" name="code" id="code" 
+                            oninput="this.value = this.value.replace(/[^0-9.]/g, '')"
                             required/>
-                        <small>Error message</small>
+                        <small class="i">Error message</small>
                     </div>
                    
                 </form>
             </div>
-            <button>Odbierz paczkę</button> 
+            <button class="button" data-get-button>Odbierz paczkę</button> 
         </div>
-        <div>
-            <div>
-                <div>
-                    <h1>Paczka Odebrana!</h1>
-                    <h4>Zrobiłeś to w czasie 10 sekund! Czy możemy zrobić dla Ciebie coś jeszcze?</h4>
+        <div class="chooseModal hidden">
+            <div class="content">
+                <div class="content-info">
+                    <h1 class="content-title">Paczka Odebrana!</h1>
+                    <h4 class="content-text">Zrobiłeś to w czasie 10 sekund! Czy możemy zrobić dla Ciebie coś jeszcze?</h4>
                 </div>
-                <div >
-                    <button>To wszystko na dziś</button>
-                    <button>Odbierz kolejną paczkę</button>
+                <div class="content-button-area">
+                    <button class="button" data-button-end-action>To wszystko na dziś</button>
+                    <button class="button" data-button-repeat-action>Odbierz kolejną paczkę</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="./scripts/main.js" type="module"></script>
 </body>
 </html>
