@@ -65,6 +65,8 @@ body{
 }
 
 .lable-text{
+    font-size: small;
+    align-self:baseline;
     padding-left: 22%;
 }
 
