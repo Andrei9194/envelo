@@ -1,3 +1,5 @@
+import { showModal, closeModal } from "./form.js"
+
 const chooseModalArea = document.querySelector('.chooseModal')
 const endActionButton = document.querySelector('[data-button-end-action]')
 const repeatActionButton = document.querySelector('[data-button-repeat-action]')

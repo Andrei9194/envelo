@@ -1,16 +1,18 @@
 import { showChooseModalArea } from "./chooseModal.js"
+import { showModal } from "./form.js"
 
 const getPackButton = document.querySelector("[data-get-button]")
-const containerForm = document.querySelector('.modal')
 const inputCode = document.querySelector("[data-input-code]")
 const inputPhone = document.querySelector("[data-input-phone]")
 
-
-const showModal =()=> containerForm.classList.remove("hidden")
-const closeModal =()=> containerForm.classList.add("hidden")
-
 getPackButton.addEventListener('click',(e)=>{
     showModal()
+    if((inputCode.value.length === 4) && (inputPhone.value.length === 13)){
+            inputCode.value = ''
+            inputPhone.value = ''
+       
+            showChooseModalArea()   
+    }
 })
 
 
