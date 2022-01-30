@@ -194,3 +194,69 @@ body{
 	visibility: visible;
     font-size: x-small;
 }
+
+
+@media(min-width: 768px){
+    .container{
+        width: 35%;
+    }
+    
+    .container-title{
+        font-weight: 900;
+    }
+    
+    .container-text{
+        font-size:medium;
+    }
+    
+    .modal{
+        width: 90%;
+    }
+    
+    .container-form{
+        flex-direction: row;
+    }
+      
+    .lable-text{
+        align-self:baseline;
+        padding-left: 18%;
+        font-size: x-small;
+    }
+    
+    .container-input{
+        width: 60%;
+    }
+    
+    .container-input[type="text"]{
+        font-size: large;
+    }
+  
+    .content{
+        justify-content: space-evenly;
+        width: 35%;
+    }
+
+    .content-button-area{
+        flex-direction: row;
+        width: 70%;
+    }
+    .content-title{
+        font-size: larger;
+    }
+    .content-text{
+        font-size: medium;
+        font-weight: 500;
+    }
+    
+    .button {
+        font-size: 16px;
+        width: 60%;
+      }
+    .hidden{
+        display: none;
+    }
+
+    .container-label.error small {
+        padding-right: 20%;
+    }
+}
