@@ -1,9 +1,9 @@
 import { showChooseModalArea } from "./chooseModal.js"
 import { showModal } from "./form.js"
 import { inputCode } from "./inputCode.js"
+import {inputPhone} from './inputPhone.js'
 
 const getPackButton = document.querySelector("[data-get-button]")
-const inputPhone = document.querySelector("[data-input-phone]")
 
 getPackButton.addEventListener('click',(e)=>{
     showModal()
@@ -14,17 +14,3 @@ getPackButton.addEventListener('click',(e)=>{
             showChooseModalArea()   
     }
 })
-
-inputPhone.addEventListener('blur', (e)=>{
-    checkInputPhone()
-})
-
-const checkInputPhone = ()=>{
-    const inputPhoneValue = inputPhone.value; 
-    if(inputPhoneValue.length < 13){
-        setErrorFor(inputPhone, 'Numer muśi meć 9 cyfr');
-    }
-    else {
-		setSuccessFor(inputPhone);
-	}
-}
